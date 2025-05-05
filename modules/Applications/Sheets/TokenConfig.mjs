@@ -55,10 +55,9 @@ export function _previewChanges(wrapper, changes) {
     const result = wrapper(changes);
 
     const form = this.element;
-    if (form) {
+    if (form && this._preview) {
         const turnMarkerData = getFormData(form);
-        this._preview.flags[MODULE_ID].turnMarkerData = turnMarkerData;
-        // this._preview?.setFlag(MODULE_ID, "turnMarkerData", turnMarkerData);
+        this._preview.flags[MODULE_ID] = {turnMarkerData};
     }
 
     return result;
