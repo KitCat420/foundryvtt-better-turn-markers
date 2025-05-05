@@ -1,0 +1,47 @@
+<div class="form-group">
+    <label for="{{appId}}opacity">{{ localize "BetterTurnMarkers.opacity.label" }}</label>
+    <div class="form-fields">
+        <range-picker id="{{appId}}opacity" name="{{prefix}}opacity" min="0.01" max="1"
+                      value="{{config.opacity}}" step="0.01" {{disabled disabled}} />
+    </div>
+    <p class="hint">{{ localize "BetterTurnMarkers.opacity.desc" }}</p>
+</div>
+
+<div class="form-group">
+    <label for="{{appId}}scale">{{ localize "BetterTurnMarkers.scale.label" }}</label>
+    <div class="form-fields">
+        <range-picker id="{{appId}}scale" name="{{prefix}}scale" min="0.05" max="5" step="0.05"
+                      value={{config.scale}} {{disabled disabled}} />
+    </div>
+    <p class="hint">{{ localize "BetterTurnMarkers.scale.desc" }}</p>
+</div>
+
+<div class="form-group">
+    <label for="{{appId}}.zIndex">{{ localize "BetterTurnMarkers.zIndex.label" }}</label>
+    <div class="form-fields">
+        <select id="{{appId}}.zIndex" name="{{prefix}}zIndex" {{disabled disabled}}>
+            {{selectOptions choices.zIndex selected=config.zIndex localize=true}}
+        </select>
+    </div>
+    <p class="hint">{{ localize "BetterTurnMarkers.zIndex.desc" }}</p>
+</div>
+
+<div class="form-group">
+    <label for="{{appId}}.position">{{ localize "BetterTurnMarkers.position.label" }}</label>
+    <div class="form-fields">
+        <select id="{{appId}}.position" name="{{prefix}}position" {{disabled disabled}}>
+            {{selectOptions choices.position selected=config.position localize=true}}
+        </select>
+    </div>
+    <p class="hint">{{ localize "BetterTurnMarkers.position.desc" }}</p>
+</div>
+
+<div class="form-group">
+    <label for="{{appId}}.rotationDirection">{{ localize "BetterTurnMarkers.rotationDirection.label" }}</label>
+    <div class="form-fields">
+        <select id="{{appId}}.rotationDirection" name="{{prefix}}rotationDirection" {{disabled disabled}}>
+            {{selectOptions choices.rotationDirection selected=config.rotationDirection localize=true}}
+        </select>
+    </div>
+    <p class="hint">{{ localize "BetterTurnMarkers.rotationDirection.desc" }}</p>
+</div>

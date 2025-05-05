@@ -1,0 +1,23 @@
+{
+  "id": "better-turn-markers",
+  "title": "Better Turn Markers",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "relationships": {
+    "requires": [
+      {
+        "id": "lib-wrapper",
+        "type": "module"
+      }
+    ]
+  },
+  "esmodules": ["modules/betterTurnMarkers.mjs"],
+  "languages": [{
+    "lang": "en",
+    "name": "English",
+    "path": "./lang/en.json"
+  }]
+}
