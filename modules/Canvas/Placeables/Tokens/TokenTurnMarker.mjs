@@ -68,7 +68,7 @@ export function animate(wrapper, ...args) {
         top_right: [(center.x - x) * 2, 0],
         center: [center.x - x, center.y - y],
         center_left: [0, center.y - y],
-        center_right: [0, (center.y - y) * 2],
+        center_right: [(center.x - x) * 2, center.y - y],
         bottom_center: [center.x - x, (center.y - y) * 2],
         bottom_left: [0, (center.y - y) * 2],
         bottom_right: [(center.x - x) * 2, (center.y - y) * 2],
