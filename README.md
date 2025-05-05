@@ -20,7 +20,8 @@ Scale the turn marker from 0.05 to 5 (5-500%) of the token size.
 
 | 185% | 300% |
 | ---- | ----- |
-| ![185%](https://github.com/user-attachments/assets/e8166b07-7c2b-401e-a145-a42a16484776) | ![300%](https://github.com/user-attachments/assets/20b809b7-d12d-4917-be98-602cb775050c) |
+| ![185%](https://github.com/user-attachments/assets/e8166b07-7c2b-401e-a145-a42a16484776) | ![300%](https://github.com/user-attachments/assets/b0114f0b-4ff2-4a7a-8d7c-73452d44d5b2)
+ |
 
 ### Anchor
 
