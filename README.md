@@ -27,3 +27,7 @@ Define, whether the turn marker is rendered above or below the token.
 
 If the turn marker animation is including a spin, this setting defines which direction the animation
 spins in (either `left` or `right`).
+
+| Left | Right |
+| ---- | ----- |
+| https://github.com/user-attachments/assets/b8a0dd7b-ef08-4de4-9cc2-8002f88d25b3 | https://github.com/user-attachments/assets/075f6dc3-0f4b-47c9-bfcf-9524fb4fcfda |
