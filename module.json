@@ -6,6 +6,13 @@
     "minimum": "13",
     "verified": "13"
   },
+  "authors": [
+    {
+      "name": "KitCat",
+      "email": "katsulynx@gmail.com",
+      "discord": "kitcat"
+    }
+  ],
   "relationships": {
     "requires": [
       {
