@@ -32,6 +32,18 @@
       "desc": "Define the rotation direction of the turn marker.",
       "left": "Spin left",
       "right": "Spin right"
+    },
+    "animationSpeed": {
+      "label": "Animation speed",
+      "desc": "Define the playback speed of the chosen animation."
+    },
+    "offsetX": {
+      "label": "Offset (X-Axis)",
+      "desc": "Offset the token by this many grid spaces in the horizontal axis."
+    },
+    "offsetY": {
+      "label": "Offset (Y-Axis)",
+      "desc": "Offset the token by this many grid spaces in the vertical axis."
     }
   }
 }

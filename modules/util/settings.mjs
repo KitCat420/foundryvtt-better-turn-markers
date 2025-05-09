@@ -46,6 +46,24 @@ export function registerSettings() {
                 step: .05,
                 default: 1.5,
             }),
+            animationSpeed: new fields.NumberField({
+                min: 0.1,
+                max: 10,
+                step: 0.1,
+                default: 1
+            }),
+            offsetX: new fields.NumberField({
+                min: -2,
+                max: 2,
+                step: 0.01,
+                default: 0
+            }),
+            offsetY: new fields.NumberField({
+                min: -2,
+                max: 2,
+                step: 0.01,
+                default: 0
+            })
         }),
         onChange: () => {
             patchTurnMarkerConfig();

@@ -14,6 +14,9 @@ export function _initializeApplicationOptions(wrapper, options) {
             zIndex: settings.zIndex || "below",
             scale: settings.scale || 1.5,
             opacity: settings.opacity || 1,
+            animationSpeed: settings.animationSpeed || 1,
+            offsetX: settings.offsetX || 0,
+            offsetY: settings.offsetY || 0,
         };
 
         this.actor.prototypeToken.setFlag(MODULE_ID, "turnMarkerData", turnMarkerData);

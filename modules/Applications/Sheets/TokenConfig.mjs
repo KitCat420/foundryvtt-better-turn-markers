@@ -14,6 +14,9 @@ export async function onRender(application, element) {
         zIndex: tokenConfig.zIndex || worldConfig.zIndex || "below",
         scale: tokenConfig.scale || worldConfig.scale || 1.5,
         opacity: tokenConfig.opacity || worldConfig.opacity || 1,
+        animationSpeed: tokenConfig.animationSpeed || worldConfig.animationSpeed || 1,
+        offsetX: tokenConfig.offsetX || worldConfig.offsetX || 0,
+        offsetY: tokenConfig.offsetY || worldConfig.offsetY || 0,
     };
 
     await extendTurnMarkerSettings(application.id, turnMarkerConfig, effectiveConfig, "betterTurnMarker", application.token.turnMarker.mode !== 2);
@@ -29,6 +32,9 @@ function getFormData(form) {
         zIndex: settings.zIndex || "below",
         scale: settings.scale || 1.5,
         opacity: settings.opacity || 1,
+        animationSpeed: settings.animationSpeed || 1,
+        offsetX: settings.offsetX || 0,
+        offsetY: settings.offsetY || 0,
     };
 }
 
@@ -45,7 +51,7 @@ export function _onChangeForm(formConfig, event) {
     if (event.target.name !== "turnMarker.mode") return;
 
     const notCustom = this.form["turnMarker.mode"].value !== "2";
-    for (const key of ["position", "rotationDirection", "zIndex", "scale", "opacity"]) {
+    for (const key of ["position", "rotationDirection", "zIndex", "scale", "opacity", "offsetX", "offsetY", "animationSpeed"]) {
         const input = this.form.querySelector(`[name="betterTurnMarker.${key}"]`);
         if (input) input.disabled = notCustom;
     }

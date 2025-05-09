@@ -7,6 +7,7 @@ export function patchTurnMarkerConfig() {
         zIndex: settings.zIndex || "below",
         position: settings.position || "center",
         rotationDirection: settings.rotationDirection || "left",
-        scale: settings.scale || 150
+        scale: settings.scale || 150,
+        animationSpeed: settings.animationSpeed || 1
     });
 }

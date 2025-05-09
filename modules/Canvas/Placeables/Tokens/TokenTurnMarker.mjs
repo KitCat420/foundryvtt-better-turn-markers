@@ -1,7 +1,7 @@
 import {patchTurnMarkerConfig} from "../../../util/config.mjs";
 import {MODULE_ID} from "../../../_id.mjs";
 
-function getConfig (obj) {
+function getConfig(obj) {
     // TODO: Fix band-aid
     patchTurnMarkerConfig();
 
@@ -50,6 +50,11 @@ export function animate(wrapper, ...args) {
     const config = getConfig(this);
     if (!config) return;
 
+    const {x, y, center, externalRadius: r} = this.token;
+    const a = this.animation;
+    const t = canvas.app.ticker.lastTime;
+    const gridSize = game.canvas.grid.size || 100;
+
     // OPACITY
     this.alpha = config.opacity || 1;
 
@@ -59,10 +64,8 @@ export function animate(wrapper, ...args) {
         below: -Infinity,
     }[config.zIndex || "below"];
 
-    const {x, y, center, externalRadius: r} = this.token;
-
     // ANCHOR POSITION
-    this.position.set(...{
+    const [xPos, yPos] = {
         top_center: [center.x - x, 0],
         top_left: [0, 0],
         top_right: [(center.x - x) * 2, 0],
@@ -72,22 +75,25 @@ export function animate(wrapper, ...args) {
         bottom_center: [center.x - x, (center.y - y) * 2],
         bottom_left: [0, (center.y - y) * 2],
         bottom_right: [(center.x - x) * 2, (center.y - y) * 2],
-    }[config.position || "center"]);
+    }[config.position || "center"];
+    this.position.set(xPos + gridSize * (config.offsetX || 0), yPos + gridSize * (config.offsetY || 0));
 
     // SIZE; Whole number = 50%, so r * 3 = 150% scale
     try {
         // Avoid error during redraw. This is stupid, but haven't found a better way yet.
         this.mesh.width = this.mesh.height = r * ((config?.scale || 1.5) / 0.5);
+    } catch {
     }
-    catch {}
 
     // SPIN DIRECTION
-    const a = this.animation;
-    const t = canvas.app.ticker.lastTime;
-    this.rotation = (t * 2 * Math.PI * a.spin / 60000) % (2 * Math.PI) * {
+    this.rotation = (t * 2 * Math.PI * a.spin * (config.animationSpeed || 1) / 60000) % (2 * Math.PI) * {
         left: 1,
         right: -1
     }[config.rotationDirection || "left"];
+
+    // PULSE
+    this.scale.set(a.pulse.min + ((a.pulse.max - a.pulse.min)
+        * (0.5 + (0.5 * Math.sin(t * 2 * Math.PI * a.pulse.speed * (config.animationSpeed || 1) / 60000)))));
 
     return result;
 }

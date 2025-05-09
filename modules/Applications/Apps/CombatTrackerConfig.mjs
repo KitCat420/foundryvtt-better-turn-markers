@@ -39,6 +39,9 @@ export async function onRender(application, element) {
         zIndex: config.zIndex || "below",
         scale: config.scale || 1.5,
         opacity: config.opacity || 1,
+        animationSpeed: config.animationSpeed || 1,
+        offsetX: config.offsetX || 0,
+        offsetY: config.offsetY || 0,
     }
 
     await extendTurnMarkerSettings(application.id, turnMarkerConfig, effectiveConfig, `${MODULE_ID}.turnMarkerConfig`, !worldConfig.enabled);
