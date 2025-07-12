@@ -1,0 +1,49 @@
+{
+  "BetterTurnMarkers": {
+    "opacity": {
+      "label": "不透明度",
+      "desc": "ターンマーカーの不透明度を指定します。"
+    },
+    "scale": {
+      "label": "スケール",
+      "desc": "メディアのスケールを指定します。"
+    },
+    "position": {
+      "label": "アンカー",
+      "desc": "ターンマーカーのアンカー位置を指定します。",
+      "top_center": "上",
+      "top_left": "左上",
+      "top_right": "右上",
+      "center": "中心",
+      "center_left": "左",
+      "center_right": "右",
+      "bottom_center": "下",
+      "bottom_left": "左下",
+      "bottom_right": "右下"
+    },
+    "zIndex": {
+      "label": "高さ",
+      "desc": "ターンマーカーの高さを指定します。",
+      "above": "コマの上",
+      "below": "コマの下"
+    },
+    "rotationDirection": {
+      "label": "回転方向",
+      "desc": "ターンマーカーの回転方向を指定します。",
+      "left": "左回転",
+      "right": "右回転"
+    },
+    "animationSpeed": {
+      "label": "アニメーション速度",
+      "desc": "選択したアニメーションの再生速度を指定します。"
+    },
+    "offsetX": {
+      "label": "オフセット (X軸)",
+      "desc": "このグリッドスペース分だけコマから水平方向にオフセットします。"
+    },
+    "offsetY": {
+      "label": "オフセット (Y軸)",
+      "desc": "このグリッドスペース分だけコマから垂直方向にオフセットします。"
+    }
+  }
+}
