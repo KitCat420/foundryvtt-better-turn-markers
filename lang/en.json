@@ -2,7 +2,7 @@
   "BetterTurnMarkers": {
     "opacity": {
       "label": "Opacity",
-      "desc": "Define the anchor position of the turn marker."
+      "desc": "Define the opacity of the turn marker."
     },
     "scale": {
       "label": "Scale",
